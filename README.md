@@ -1,4 +1,4 @@
-# C-project
+# C++-project
 [Intro]
 (Invisible)
 (Invisible)
