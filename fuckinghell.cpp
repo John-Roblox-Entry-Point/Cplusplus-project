@@ -49,12 +49,12 @@ Newark.isineurope = false;
 
 cout << "City name: " << London.name << endl;
 cout << "Population size: " << London.population << endl;
-cout << "Area size: " << London.citysize << "kilometers" << endl;
+cout << "Area size: " << London.citysize << " kilometers" << endl;
 cout << "GDP: " << '$' << London.GDP << " dollars" << endl << endl;
 
 cout << "City name: " << Newark.name << endl;
 cout << "Population size: " << Newark.population << endl;
-cout << "Area size: " << Newark.citysize << "sq mile" << endl;
+cout << "Area size: " << Newark.citysize << " sq mile" << endl;
 cout << "GDP: " << '$' << Newark.GDP << " dollars" << endl;
 //Basically the basic info
 
@@ -79,8 +79,11 @@ if (chosen == type[1]) {
         cout << "How big is London in freedom units?";
         break;
     }else{
-    cout << "You lose";}
+    cout << "You lose" << endl;}
     citysizeguesses++;
+    }
+    if(citysizeguesses == 10){
+        cout << "Please don't fail the next one..." << endl << "ok, so how big is London in SQUARE METERS" << endl;
     }
     while(citysizeguesses2 < 7){
         cin >> wtrbttle;
@@ -88,11 +91,18 @@ if (chosen == type[1]) {
             cout << "You win";
             break;
         }else{
-        cout << "Try again";}
+        cout << "Try again" << endl;}
         citysizeguesses2++;
     }
     cout << "Guesses for number 1: " << citysizeguesses << endl;
     cout << "Guesses for number 2: " << citysizeguesses2 << endl;
+    if(citysizeguesses == 10 && citysizeguesses2 == 10){
+        cout << "You're a dumbass" << endl;
+    }else if(citysizeguesses ==10 || citysizeguesses2 == 10){
+    cout << "You're not really that dumb" << endl;
+    }else{
+    cout << "You're smart at least" << endl;
+    }
 }
 if (chosen == type[2]) {
     cout << "What is the combined GDP of both cities?" << endl;
@@ -116,6 +126,9 @@ while(Guessess < 5){
                 Guessess++;
                 /* Would count guesses, but I think
                 it only counts it after the 1st attempt*/
+                if(Guessess == 5){
+                    cout << "You suck at this. Anyways, is Newark in Europe?" << endl;
+                }
     }
 while(Guesses2 < 3){
     cin >> answer2;
