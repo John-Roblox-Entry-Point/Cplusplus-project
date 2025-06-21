@@ -11,7 +11,7 @@ struct city {
 };
 int main() {
 string type[4] = {"Population","City size","GDP","Location"};
-string chosen = 0;
+string chosen;
 // Used for picking a game
 int thedifference;
 int popanswer = 8554631;
