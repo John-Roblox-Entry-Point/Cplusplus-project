@@ -10,7 +10,7 @@ struct city {
     bool isineurope;
 };
 int main() {
-string type[4] = {"Population","City size","GDP","Location"};
+string type[4] = {"Population","CitySize","GDP","Location"};
 string chosen;
 // Used for picking a game
 int thedifference;
@@ -58,7 +58,7 @@ cout << "Area size: " << Newark.citysize << "sq mile" << endl;
 cout << "GDP: " << '$' << Newark.GDP << " dollars" << endl;
 //Basically the basic info
 
-cout << "Write Population, City size, GDP, or Location: ";
+cout << "Write Population, CitySize, GDP, or Location: ";
 cin >> chosen;
 
 if (chosen == type[0]) {
@@ -80,6 +80,7 @@ if (chosen == type[1]) {
         break;
     }else{
     cout << "You lose";}
+    citysizeguesses++;
     }
     while(citysizeguesses2 < 7){
         cin >> wtrbttle;
@@ -88,7 +89,6 @@ if (chosen == type[1]) {
             break;
         }else{
         cout << "Try again";}
-        citysizeguesses++;
         citysizeguesses2++;
     }
     cout << "Guesses for number 1: " << citysizeguesses << endl;
